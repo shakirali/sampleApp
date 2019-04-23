@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Voting View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="VotingViewController" customModule="DogApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ry8-LC-8Ta" userLabel="Name">
+                                <rect key="frame" x="20" y="64" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="djS-o6-HUg" userLabel="Action stack view">
+                                <rect key="frame" x="40" y="124" width="334" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1kI-XM-97G">
+                                        <rect key="frame" x="0.0" y="0.0" width="157" height="30"/>
+                                        <color key="backgroundColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="😍 LOVE IT "/>
+                                        <connections>
+                                            <action selector="upVoteBtnTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="EvN-Pe-CkD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lkG-J3-KVV">
+                                        <rect key="frame" x="177" y="0.0" width="157" height="30"/>
+                                        <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" title="😏NOPE IT"/>
+                                        <connections>
+                                            <action selector="downVoteBtnTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="NTZ-mi-7PD"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hsx-QR-PfK"/>
+                                </constraints>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oeo-kq-Grn">
+                                <rect key="frame" x="20" y="174" width="374" height="270"/>
+                                <color key="backgroundColor" red="0.67000001669999998" green="0.67000001669999998" blue="0.67000001669999998" alpha="1" colorSpace="deviceRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="xgj-59-iQd">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="600"/>
+                                    </constraint>
+                                </constraints>
+                            </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="B2E-Dm-lb7">
+                                <rect key="frame" x="197" y="299" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2fI-wJ-bzk">
+                                <rect key="frame" x="40" y="464" width="334" height="34"/>
+                                <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="ZQA-wz-tr6"/>
+                                </constraints>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextBtnTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="4SU-Cw-2Py"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="PJA-a6-D35" userLabel="Breed stack view">
+                                <rect key="frame" x="40" y="518" width="334" height="138.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="uTa-Pw-dUf" userLabel="Group Stack view">
+                                        <rect key="frame" x="0.0" y="0.0" width="97" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zxo-o1-OSF" userLabel="BreedGroup title">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MCo-XH-Vdt" userLabel="value">
+                                                <rect key="frame" x="52.5" y="0.0" width="44.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="mm1-Th-reL" userLabel="Origin stack view">
+                                        <rect key="frame" x="0.0" y="30.5" width="44.5" height="49"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGJ-J6-sDR" userLabel="Origin title">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0C-kJ-ffh" userLabel="value">
+                                                <rect key="frame" x="0.0" y="28.5" width="44.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KUu-Ac-slB" userLabel="Temperament Stack view">
+                                        <rect key="frame" x="0.0" y="89.5" width="44.5" height="49"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hZ-yV-pi5" userLabel="Temperament title">
+                                                <rect key="frame" x="0.0" y="0.0" width="44.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMy-nb-8Zc" userLabel="value">
+                                                <rect key="frame" x="0.0" y="28.5" width="44.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="djS-o6-HUg" secondAttribute="trailing" constant="40" id="BaY-zm-5QU"/>
+                            <constraint firstItem="oeo-kq-Grn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FcY-wB-X2V"/>
+                            <constraint firstItem="oeo-kq-Grn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="GEt-xx-ZrN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oeo-kq-Grn" secondAttribute="trailing" constant="20" id="Kl8-4Z-vm5"/>
+                            <constraint firstItem="ry8-LC-8Ta" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MAf-6m-vAe"/>
+                            <constraint firstItem="djS-o6-HUg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="P75-OY-TnO"/>
+                            <constraint firstItem="djS-o6-HUg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="ZLR-iw-O6H"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ry8-LC-8Ta" secondAttribute="trailing" constant="20" id="e10-AI-HxN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2fI-wJ-bzk" secondAttribute="trailing" constant="40" id="eDj-Jr-mCJ"/>
+                            <constraint firstItem="2fI-wJ-bzk" firstAttribute="top" secondItem="oeo-kq-Grn" secondAttribute="bottom" constant="20" id="frg-uk-QT0"/>
+                            <constraint firstItem="PJA-a6-D35" firstAttribute="top" secondItem="2fI-wJ-bzk" secondAttribute="bottom" constant="20" id="g4Q-wp-ETH"/>
+                            <constraint firstItem="B2E-Dm-lb7" firstAttribute="centerY" secondItem="oeo-kq-Grn" secondAttribute="centerY" id="hcb-Ei-6zF"/>
+                            <constraint firstItem="ry8-LC-8Ta" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="mNJ-4q-dqJ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="PJA-a6-D35" secondAttribute="trailing" constant="40" id="mu0-JS-oVc"/>
+                            <constraint firstItem="oeo-kq-Grn" firstAttribute="top" secondItem="djS-o6-HUg" secondAttribute="bottom" constant="20" id="nHw-tE-wNE"/>
+                            <constraint firstItem="B2E-Dm-lb7" firstAttribute="centerX" secondItem="oeo-kq-Grn" secondAttribute="centerX" id="wFR-fk-X9J"/>
+                            <constraint firstItem="PJA-a6-D35" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="zA4-qR-hsr"/>
+                            <constraint firstItem="2fI-wJ-bzk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="zW8-3O-e4a"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="B2E-Dm-lb7" id="Zpm-h6-GNa"/>
+                        <outlet property="breedGroupStackView" destination="uTa-Pw-dUf" id="eE2-av-wgJ"/>
+                        <outlet property="breedGroupTitleLabel" destination="zxo-o1-OSF" id="iXX-wd-4wF"/>
+                        <outlet property="breedGroupValueLabel" destination="MCo-XH-Vdt" id="6w4-Xj-UtT"/>
+                        <outlet property="imageView" destination="oeo-kq-Grn" id="jsh-rf-E6f"/>
+                        <outlet property="name" destination="ry8-LC-8Ta" id="geH-4J-SlM"/>
+                        <outlet property="originStackView" destination="mm1-Th-reL" id="W40-Bx-qEY"/>
+                        <outlet property="originTitleLabel" destination="YGJ-J6-sDR" id="bL0-te-l9U"/>
+                        <outlet property="originValueLabel" destination="t0C-kJ-ffh" id="K79-s7-wxf"/>
+                        <outlet property="temperamentStackView" destination="KUu-Ac-slB" id="tqw-ch-nS4"/>
+                        <outlet property="temperamentTitleLabel" destination="7hZ-yV-pi5" id="IyO-HA-3WN"/>
+                        <outlet property="temperamentValueLabel" destination="PMy-nb-8Zc" id="0Tr-G9-cwo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+</document>
