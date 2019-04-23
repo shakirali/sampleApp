@@ -2,8 +2,8 @@
 This is the repository to use the dogAPI: https://thedogapi.com
 
 This App has following features:
-1. Randomly display dog images along with breed name, origin, breed group and temperament.
-2. Allow users to vote up or down for a particular image.
+1. Asynchronously download random dog images along with information such as breed name, origin, breed group and temperament.
+2. Allow users to vote up or down for a particular image and asynchronously sends the voting request to the server.
 3. Display the Alert when the vote is casted successfully.
 3. UI adjusts correctly in case of missing information such as origin, breed group and temperament.
 
